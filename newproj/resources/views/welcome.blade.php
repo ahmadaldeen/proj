@@ -48,23 +48,24 @@
 
 				 @foreach ($p as $ph)
 				 		<div class="panel"><img src="{{url($ph->path)}}" alt="Image 1"/><header class="codrops-header hed ">
-							<h1 value = "{{$ph->imagHeader}}" style="color:#fff">{{$ph->imagHeader}}<span>{{$ph->imagContant}}</span></h1>
+							<h1 style="color:#fff">{{$ph->imagHeader}}<span>{{$ph->imagContant}}</span></h1>
 						</header></div>
 
 			  @endforeach
 
 			</div>
-
 		</div><!-- /container -->
-
     <!-- start filter -->
     <h1 class="h">Image Gallery Filter Plugin Demo</h1>
-        <div id="buttons"></div>
-        <div id="gallery">
-				@foreach ($pr as $per)
-					  <img src="{{url($per->path)}}" data-tags="{{$per->type}}" alt="Alt 1" />
- 			  @endforeach
-        </div>
+    <div id="buttons"></div>
+    <div id="gallery">
+			@foreach ($pr as $per)
+			<div class="col-sm-4" style="     float: left;   width: 32.3333%;"  data-tags="{{$per->type}}" alt="Alt 1" >
+			  <img src="{{url($per->path)}}"/>
+				<h4 style="color:#333; display: flex; width: 100%;" data-tags="{{$per->type}}" alt="Alt 1" style="color:#fff">{{ " &nbsp; &nbsp; &nbsp; &nbsp; the name of this parum is : ". $per->name." "}}</h4><br /><span>{{"the price is: " .$per->price}}</span>
+	   	</div>
+			@endforeach
+    </div>
 	  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous"></script>
     {!! Html::script("filter/js/filter-tags.js") !!}
 
