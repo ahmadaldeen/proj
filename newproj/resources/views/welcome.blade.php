@@ -45,65 +45,29 @@
 				<span class="right"><a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=19242"><span>Back to the Codrops Article</span></a></span>
 			</div>
 			<div id="boxgallery" class="boxgallery" data-effect="effect-1">
-				<div class="panel"><img src="slider/img/1.jpg" alt="Image 1"/></div>
-				<div class="panel"><img src="slider/img/2.jpg" alt="Image 2"/></div>
-				<div class="panel"><img src="slider/img/3.jpg" alt="Image 3"/></div>
-				<div class="panel"><img src="slider/img/4.jpg" alt="Image 4"/></div>
+
+				 @foreach ($p as $ph)
+				 		<div class="panel"><img src="{{url($ph->path)}}" alt="Image 1"/><header class="codrops-header hed ">
+							<h1 value = "{{$ph->imagHeader}}" style="color:#fff">{{$ph->imagHeader}}<span>{{$ph->imagContant}}</span></h1>
+						</header></div>
+
+			  @endforeach
+
 			</div>
-			<header class="codrops-header hed">
-				<h1 style="color:#fff">Four Boxes Slideshow <span>Recreating the background image slideshow seen on <a href="http://www.atelier-serge-thoraval.com/en/">Atelier Serge Thoroval's website</a></span></h1>
-				<nav class="codrops-demos">
-					<a class="current-demo" href="index.html">Serge Thoroval</a>
-					<a href="index2.html">Lateral</a>
-					<a href="index3.html">Fall</a>
-				</nav>
-			</header>
+
 		</div><!-- /container -->
 
     <!-- start filter -->
-
-
     <h1 class="h">Image Gallery Filter Plugin Demo</h1>
-
         <div id="buttons"></div>
-
-        <div id="gallery" class = "g">
-
-          <img src="https://picsum.photos/600/450?image=776" data-tags="Blog" alt="Alt 1" />
-
-
-          <img src="https://picsum.photos/600/450?image=777" data-tags="Health & Beauty" alt="Alt 2" />
-
-
-            <img src="https://picsum.photos/600/450?image=755" data-tags="Business" alt="Alt 3" />
-
-
-            <img src="https://picsum.photos/600/450?image=778" data-tags="Blog,Health & Beauty" alt="Alt 4" />
-
-
-            <img src="https://picsum.photos/600/450?image=764" data-tags="Business" alt="Alt 5" />
-
-            <img src="https://picsum.photos/600/450?image=526" data-tags="Blog,Shop" alt="Alt 6" />
-
-            <img src="https://picsum.photos/600/450?image=668" data-tags="Blog,Megazine" alt="Alt 7" />
-
-            <img src="https://picsum.photos/600/450?image=660" data-tags="Blog" alt="Alt 8" />
-
-            <img src="https://picsum.photos/600/450?image=659" data-tags="Blog,Portfolio" alt="Alt 9" />
-
-            <img src="https://picsum.photos/600/450?image=513" data-tags="Business" alt="Alt 10" />
-
-            <img src="https://picsum.photos/600/450?image=535" data-tags="Shop" alt="Alt 11" />
-
-            <img src="https://picsum.photos/600/450?image=531" data-tags="Shop,Blog" alt="Alt 12" />
-
-
+        <div id="gallery">
+				@foreach ($pr as $per)
+					  <img src="{{url($per->path)}}" data-tags="{{$per->type}}" alt="Alt 1" />
+ 			  @endforeach
         </div>
-
 	  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous"></script>
     {!! Html::script("filter/js/filter-tags.js") !!}
-    {!! Html::script("filter/js/filter.js") !!}
-		{!! Html::script("filter/js/filter.min.js") !!}
+
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-36251023-1']);

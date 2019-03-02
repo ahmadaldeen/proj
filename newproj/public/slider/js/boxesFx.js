@@ -78,7 +78,8 @@
 			var img = panel.querySelector( 'img' ), imgReplacement = '';
 			for( var i = 0; i < self.panelsCount; ++i ) {
 				imgReplacement += '<div class="bg-tile"><div class="bg-img"><img src="' + img.src + '" /></div></div>'
-			}
+
+    	}
 			panel.removeChild( img );
 			panel.innerHTML = imgReplacement + panel.innerHTML;
 		} );
@@ -165,9 +166,7 @@
 		}
 		 else  if( dir === 'prev' ){
 			this.current = this.current > 0 ? this.current - 1 : this.panelsCount - 1;
-		} else {
-     this.current = this.current > 0 ? this.current - 1 : this.panelsCount - 1;
-   }
+		}
 
 		// next panel to be shown
 		var nextPanel = this.panels[ this.current ];
