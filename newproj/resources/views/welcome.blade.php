@@ -50,7 +50,6 @@
 				 		<div class="panel"><img src="{{url($ph->path)}}" alt="Image 1"/><header class="codrops-header hed ">
 							<h1 style="color:#fff">{{$ph->imagHeader}}<span>{{$ph->imagContant}}</span></h1>
 						</header></div>
-
 			  @endforeach
 
 			</div>
@@ -61,8 +60,8 @@
     <div id="gallery">
 			@foreach ($pr as $per)
 			<div class="col-sm-4" style="     float: left;   width: 32.3333%;"  data-tags="{{$per->type}}" alt="Alt 1" >
-			  <img src="{{url($per->path)}}"/>
-				<h4 style="color:#333; display: flex; width: 100%;" data-tags="{{$per->type}}" alt="Alt 1" style="color:#fff">{{ " &nbsp; &nbsp; &nbsp; &nbsp; the name of this parum is : ". $per->name." "}}</h4><br /><span>{{"the price is: " .$per->price}}</span>
+			  <img src="{{url('filter/' . $per->path)}}"/>
+				<h4 style="color:#333; display: flex; width: 100%;" data-tags="{{$per->type}}" alt="Alt 1" style="color:#fff">{{ " &nbsp; &nbsp; &nbsp;  the name of this parum is : ". $per->name." "}}</h4><br /><span>{{"the price is: " .$per->price}}</span>
 	   	</div>
 			@endforeach
     </div>

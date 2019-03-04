@@ -51,7 +51,21 @@ return [
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
-            'url' => env('APP_URL').'/storage',
+            'url' => env('APP_URL').'public/storage',
+            'visibility' => 'public',
+        ],
+
+        'slider' => [
+            'driver' => 'local',
+            'root' => public_path('slider'),
+            'url' => env('APP_URL').'/public/slider',
+            'visibility' => 'public',
+        ],
+
+        'filter' => [
+            'driver' => 'local',
+            'root' => public_path('filter'),
+            'url' => env('APP_URL').'/public/filter',
             'visibility' => 'public',
         ],
 
