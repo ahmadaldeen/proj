@@ -19,6 +19,7 @@ class Parfums extends Migration
         $table->integer('price');
         $table->string('type');
         $table->string('path');
+        $table->string('content');
         $table->timestamps();
       });
     }

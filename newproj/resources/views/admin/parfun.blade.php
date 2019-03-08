@@ -14,6 +14,8 @@
               <h1>enter the infornation aut parfun</h1>
               <input style="    margin-bottom: 3%; margin-top: 6%;" name="name" class="form-control" placeholder="Enter the name" value="">
               <input style="    margin-bottom: 3%; margin-top: 6%;"  name="price" class="form-control" placeholder="Enter the price" value="">
+              <input style="    margin-bottom: 3%; margin-top: 6%;"  name="co" class="form-control" placeholder="Enter the Content" value="">
+
               <select name="type" class="form-control">
                 <option value="men">men</option>
                 <option value="woman">woman</option>

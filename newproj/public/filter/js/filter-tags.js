@@ -1,6 +1,6 @@
 (function() {
 
-  var $imgs = $('#gallery div');                  // Store all images
+  var $imgs = $('.div');                  // Store all images
   var $buttons = $('#buttons');                   // Store buttons element
   var tagged = {};                                // Create tagged object
 

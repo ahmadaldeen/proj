@@ -12,6 +12,7 @@ class parfum extends Model
      'name',
      'price',
      'type',
-     'path'
+     'path',
+     'content'
    ];
 }

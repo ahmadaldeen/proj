@@ -14,8 +14,10 @@
         <div class="panel-body">
           <div class="form-group">
               <label>Text Input with Placeholder</label>
-              <input name="name" class="form-control" placeholder="Enter text" value="{{$p->name}}">
-              <input name="price" class="form-control" placeholder="Enter text" value="{{$p->price}}">
+              <input name="name" class="form-control" placeholder="Enter the name" value="{{$p->name}}">
+              <input name="price" class="form-control" placeholder="Enter the price" value="{{$p->price}}">
+              <input name="co" class="form-control" placeholder="Enter the content" value="{{$p->content}}">
+
               <select name="type" class="form-control">
                 <option value="men">men</option>
                 <option value="woman">woman</option>

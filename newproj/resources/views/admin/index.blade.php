@@ -280,10 +280,13 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="{{Route('home.admin')}}"><i class="fa fa-dashboard fa-fw"></i> parfun  sttings</a>
+                            <a href="{{Route('home.adminp')}}"><i class="fa fa-dashboard fa-fw"></i> parfun  sttings</a>
                         </li>
                         <li>
                             <a href="{{Route('home.adminh')}}"><i class="fa fa-dashboard fa-fw"></i>  header sttings</a>
+                        </li>
+                        <li>
+                            <a href="{{Route('home.admini')}}"><i class="fa fa-dashboard fa-fw"></i>  info sttings</a>
                         </li>
                     </ul>
                 </div>
